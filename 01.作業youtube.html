@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/all.css">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', 微軟正黑體, Geneva, Verdana, sans-serif;
+      font-size: 12px;
+
+    }
+
+    html,
+    body {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .header {
+      width: 100%;
+      height: 8%;
+      left: 0;
+      top: 0;
+      margin: auto 0;
+      padding: 10px 10px;
+      background: white;
+      position: fixed;
+      z-index: 99;
+
+    }
+
+    .header i {
+      margin: 10px;
+
+    }
+
+    .header img {
+      width: 100px;
+    }
+
+    .header1 {
+      width: 800px;
+      height: 8%;
+      left: 30%;
+      top: 0;
+      margin: auto;
+      position: fixed;
+    }
+
+    .header2 {
+      width: 200px;
+      height: 50px;
+      top: 0;
+      right: 0;
+      margin: auto 10px;
+      position: fixed;
+    }
+
+    .left {
+      width: 15%;
+      height: 92%;
+      float: left;
+      overflow-y: scroll;
+      top: 8%;
+      position: relative;
+    }
+
+    .input1 {
+      border-radius: 3px 0 0 3px;
+      width: 500px;
+      height: 30px;
+      border: .5px solid rgb(189, 189, 189);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+
+    }
+
+    .button1 {
+      width: 80px;
+      height: 30px;
+      background-image: url(./align-justify.svg), width 20px;
+      border: .5px solid rgb(189, 189, 189);
+      border-radius: 0 3px 3px 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 500px;
+      margin: auto;
+      right: auto;
+    }
+
+    .button1:hover {
+      box-shadow: 1px 1px 1px rgb(185, 185, 185);
+    }
+
+    .button2 {
+      width: 30px;
+      height: 30px;
+      border: none;
+      border-radius: 50%;
+      top: 0;
+      bottom: 0;
+      left: 600px;
+      margin: auto;
+      position: absolute;
+    }
+
+    .button2:active,
+    .button2-1:active,
+    .button2-2:active {
+
+      background: rgb(112, 112, 112);
+      box-shadow: 1px 1px 1px rgb(185, 185, 185);
+    }
+
+
+
+    .button2-3 {
+      width: 80px;
+      height: 30px;
+      border: .5px solid rgb(64, 43, 255);
+      color: rgb(64, 43, 255);
+      border-radius: 3px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto 10px;
+      position: absolute;
+
+    }
+
+    .button2-1 {
+      width: 30px;
+      height: 30px;
+      border: none;
+      border-radius: 50%;
+      top: 0;
+      bottom: 0;
+      right: 150px;
+      margin: auto;
+      position: absolute;
+
+    }
+
+    .button2-2 {
+      width: 30px;
+      height: 30px;
+      border: none;
+      border-radius: 50%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto 100px;
+      position: absolute;
+
+    }
+
+    .right {
+      width: 85%;
+      height: 100%;
+      float: right;
+      position: relative;
+
+
+    }
+
+    .right1 {
+      width: 100%;
+      height: 8%;
+      top: 8%;
+      left: 0;
+      right: 0;
+      position: sticky;
+      background: white;
+      border-top: .5px solid rgb(223, 223, 223);
+      border-bottom: .5px solid rgb(223, 223, 223);
+
+
+    }
+
+    .box {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      text-align: center;
+
+
+
+    }
+
+    .button3 {
+      width: 50px;
+      height: 25px;
+      border-radius: 15px;
+      margin: 5px 5px;
+      background-color: rgb(235, 235, 235);
+      border: 1px solid rgb(161, 161, 161);
+
+
+    }
+
+    .button3:hover {
+      background-color: rgb(202, 202, 202);
+    }
+
+    .button3:active {
+      background-color: black;
+      color: white;
+
+    }
+
+
+
+    .button4 {
+      margin: 0;
+      width: 100%;
+      height: 35px;
+      text-align: left;
+      padding: 0 20px;
+      border: none;
+      background: white;
+    }
+
+    .button4:hover {
+      background: rgb(223, 223, 223);
+    }
+
+    .button4:active {
+      background: gray;
+    }
+
+    hr {
+      border: 0;
+      padding-top: .5px;
+      background: rgb(223, 223, 223);
+      margin: 10px;
+    }
+
+    .left div a {
+      font-size: 8px;
+      text-decoration: none;
+      list-style: none;
+      color: black;
+    }
+
+    .content1 {
+      width: 280px;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .container {
+      width: 100%;
+      height: 87%;
+      top: 8%;
+      position: relative;
+      justify-content: center;
+      text-align: center;
+      overflow-y: scroll;
+
+    }
+
+    .photo1 {
+      margin: 0;
+      position: relative;
+      float: top;
+      width: 100%;
+    }
+
+    .photo2 {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-image: url("https://picsum.photos/40/40/?random=1");
+      float: left;
+      margin: 0;
+    }
+
+    .content {
+      width: 80%;
+      float: left;
+      justify-content: none;
+      text-align: left;
+      margin: 0 10px;
+
+    }
+
+    .photo1::before {
+      content: "50:10";
+      width: 40px;
+      height: 15px;
+      border-radius: 15%;
+      right: 5px;
+      bottom: 8px;
+      background: #000;
+      z-index: 5;
+      position: absolute;
+      color: white;
+
+    }
+
+    .subscription {
+      width: 100%;
+      height: 40%;
+      background: #000;
+      margin: 0;
+      justify-content: left;
+      text-align: left;
+      color: white;
+      position: relative;
+
+    }
+
+    .subscription img {
+      width: 350px;
+      margin-top: 40px;
+      margin-left: 50px;
+    }
+
+    .subscription p {
+      font-size: 25px;
+      width: 400px;
+      height: 100px;
+      margin: 0 50px;
+      letter-spacing: -1px;
+      line-height: 25px;
+    }
+
+    .subscription button {
+      border: 1px solid white;
+      width: 80px;
+      height: 40px;
+      color: white;
+      background: black;
+      margin: 0 50px;
+      border-radius: 5%;
+    }
+
+    .subscription::before {
+      width: 20px;
+      height: 20px;
+      content: "X";
+      background: gray;
+      color: black;
+      right: 10px;
+      top: 10px;
+      z-index: 5;
+      position: absolute;
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <i class="fas fa-align-justify fa-2x"></i>
+    <img src="./YouTube_Logo_2017.svg.png">
+    <div class="header1">
+      <input type="text" maxlength="100" placeholder=" 搜 尋" class="input1">
+      <button class="button1"><i class="fas fa-search"></i></button>
+      <button class="button2"><i class="fas fa-microphone"></i></button>
+    </div>
+    <div class="header2">
+      <button class="button2-1"><i class="fas fa-th"></i></i></button>
+      <button class="button2-2"><i class="fas fa-ellipsis-v"></i></button>
+      <button class="button2-3"><i class="fas fa-user-alt">登入</i> </button>
+    </div>
+
+  </div>
+
+  <div class="left">
+
+    <button class="button4"><i class="fas fa-home"></i> 首頁</button>
+    <button class="button4"><i class="far fa-compass"></i> 探索</button>
+    <button class="button4"><i class="far fa-folder-open"></i> 訂閱內容</button>
+    <hr>
+    <button class="button4"><i class="far fa-clone"></i> 媒體庫</button>
+    <button class="button4"><i class="far fa-address-card"></i> 觀看紀錄</button>
+    <hr>
+    <p style="margin: 10px;">登入帳戶即可對影片表示喜歡、發布留言及訂閱頻道。</p>
+    <button class="button2-3" style="left: 0;top: auto; bottom: auto; position: relative;"><i
+        class="fas fa-user-alt">登入</i></button>
+    <hr>
+    <p style="margin: 10px;">YOUTUBE 精選</p>
+    <button class="button4"><i class="fas fa-music"></i> 音樂</button>
+    <button class="button4"><i class="fas fa-trophy"></i> 體育</button>
+    <button class="button4"><i class="fas fa-gamepad"></i> 遊戲</button>
+    <button class="button4"><i class="fas fa-film"></i> 電影</button>
+    <button class="button4"><i class="far fa-newspaper"></i> 新聞</button>
+    <button class="button4"><i class="fab fa-mixcloud"></i> 直播</button>
+    <button class="button4"><i class="fas fa-gamepad"></i> 360度影片</button>
+    <hr>
+    <button class="button4"><i class="fas fa-plus-circle"></i> 瀏覽頻道</button>
+    <hr>
+    <p style="margin: 10px;">更多 YOUTUBE 功能</p>
+    <button class="button4"><i class="fab fa-youtube"></i> YouTube Premium</button>
+    <button class="button4"><i class="fab fa-mixcloud"></i> 直播</button>
+    <hr>
+    <button class="button4"><i class="fas fa-cog"></i> 設定</button>
+    <button class="button4"><i class="far fa-flag"></i> 檢舉</button>
+    <button class="button4"><i class="far fa-question-circle"></i> 說明</button>
+    <button class="button4"><i class="fas fa-comment-medical"></i> 提供意見</button>
+    <div style="margin: 10px 10px;">
+      <a href="#" class="a">簡介</a>
+      <a href="#" class="a">媒體版權</a>
+      <a href="#" class="a">與我們聯絡</a>
+      <a href="#" class="a">創作者</a>
+      <a href="#" class="a">廣告</a>
+      <a href="#" class="a">開發人員</a>
+      <br>
+      <a href="#" class="a">條款</a>
+      <a href="#" class="a">隱私權</a>
+      <a href="#" class="a">政策與安全性</a>
+      <a href="#" class="a">YouTube 運作方式</a>
+      <a href="#" class="a">測試新功能</a>
+    </div>
+
+  </div>
+  <div class="right">
+    <div class="right1">
+      <div class="box">
+        <button class="button3">全部</button>
+        <button class="button3">音樂</button>
+        <button class="button3">卡通</button>
+        <button class="button3">饒舌</button>
+        <button class="button3" style="width: 70px;">直播中</button>
+        <button class="button3" style="width: 70px;">ASMR</button>
+        <button class="button3" style="width: 70px;">手工藝</button>
+        <button class="button3" style="width: 90px;">最新上傳</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="subscription"><img
+          src="./c117e153c0f61ba6e181349f4583a3ca73508d436feb398300ee138eae8c3286_640x48.png">
+        <p>訂閱家庭方案，最多可讓 6 位家庭成員享有零廣告的 YouTube Music，及背景播放功能</p>
+        <button>立即訂閱</button>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=1"></div>
+        <div class="photo2"> </div>
+        <div class="content">3小時50首特選最佳抒情歌 (艾辰《错位时空》 白月光與朱砂痣
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=2"></div>
+        <div class="photo2"> </div>
+        <div class="content">蘇打綠 - 小情歌『就算大雨讓這座城市顛倒，我會給你懷抱。』
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=3"></div>
+        <div class="photo2"> </div>
+        <div class="content">A-Lin 黃麗玲《我是歌手3》全部演唱合輯
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=4"></div>
+        <div class="photo2"> </div>
+        <div class="content">[ 超人氣！] 林俊傑 JJ Lin 《夢想的聲音》全三季合輯
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=5"></div>
+        <div class="photo2"> </div>
+        <div class="content">我茫然了～肖战“同款香味”秒没！Dettol滴露柑橘香皂～
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=6"></div>
+        <div class="photo2"> </div>
+        <div class="content">2020 kkbox 一人一首成名曲 : 少年 - 夢然 , 音闕詩聽 - 芒種 ,
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=7"></div>
+        <div class="photo2"> </div>
+        <div class="content">飛鳥和蟬- 任然 Cover ( 蔡恩雨 Priscilla Abby)
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=8"></div>
+        <div class="photo2"> </div>
+        <div class="content">2020 kkbox 一人一首成名曲 : 少年 - 夢然 , 音闕詩聽 - 芒種 ,
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=9"></div>
+        <div class="photo2"> </div>
+        <div class="content">「精选」怀旧经典金曲 - 70后80后90后经典老歌500首：
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=10"></div>
+        <div class="photo2"> </div>
+        <div class="content">50首突破百萬的洗腦神曲你一定有聽過多想留在你身邊 (少年,你
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=11"></div>
+        <div class="photo2"> </div>
+        <div class="content">[ 超人氣！] 林俊傑 JJ Lin 《夢想的聲音》全三季合輯
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="photo1"><img src="https://picsum.photos/280/180/?random=12"></div>
+        <div class="photo2"> </div>
+        <div class="content">3小時50首特選最佳抒情歌 (艾辰《错位时空》 白月光與朱砂痣
+          <p>abcdefg的youtube<br>觀看次數:500萬。一周前</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
